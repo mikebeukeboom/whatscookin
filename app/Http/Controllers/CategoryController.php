@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Dish;
-use App\Category;
-use App\Ingredient;
+use App\category;
 use Illuminate\Http\Request;
 
-class DishController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +14,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $category = new Category();
-        $categories = $category->getCategories();
-
-        $ingredient = new Ingredient();
-        $ingredients = $ingredient->getIngredients();
-        return view('pages.index', ['categories' => $categories, 'ingredients' => $ingredients]);
+        //
     }
 
     /**
@@ -48,21 +41,21 @@ class DishController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Dish  $dish
+     * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Dish $dish)
+    public function show(category $category)
     {
-        return view('pages.list');
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Dish  $dish
+     * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dish $dish)
+    public function edit(category $category)
     {
         //
     }
@@ -71,10 +64,10 @@ class DishController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Dish  $dish
+     * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dish $dish)
+    public function update(Request $request, category $category)
     {
         //
     }
@@ -82,10 +75,10 @@ class DishController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Dish  $dish
+     * @param  \App\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dish $dish)
+    public function destroy(category $category)
     {
         //
     }
