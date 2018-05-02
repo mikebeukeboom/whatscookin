@@ -16,11 +16,8 @@
             </div>
             <fieldset class="form-group">
                 <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Categories</legend>
+                    <legend class="col-form-label col-sm-2 pt-0"><a href="/categories/create">Categories</a></legend>
                     <div class="col-sm-10">
-                        @if(empty($categories))
-                            <p>Add a category first</p>
-                        @else
                             @foreach($categories as $category)
                                 <div class="form-check">
                                     <input class="form-check-input"
@@ -34,7 +31,6 @@
                                     </label>
                                 </div>
                             @endforeach
-                        @endif
                     </div>
                 </div>
             </fieldset>

@@ -11,5 +11,7 @@
 |
 */
 
-Route::get('/', 'DishController@index');
-Route::post('/lists/', 'DishController@show');
+Route::get('/dishes/create', 'DishController@create');
+
+Route::get('/categories/create', 'CategoryController@create');
+Route::post('/categories/store', 'CategoryController@store');

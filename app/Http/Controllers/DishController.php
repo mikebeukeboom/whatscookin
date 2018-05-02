@@ -16,12 +16,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $category = new Category();
-        $categories = $category->getCategories();
 
-        $ingredient = new Ingredient();
-        $ingredients = $ingredient->getIngredients();
-        return view('pages.index', ['categories' => $categories, 'ingredients' => $ingredients]);
     }
 
     /**
@@ -31,7 +26,12 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        $category = new Category();
+        $categories = $category->getCategories();
+
+        $ingredient = new Ingredient();
+        $ingredients = $ingredient->getIngredients();
+        return view('pages.index', ['categories' => $categories, 'ingredients' => $ingredients]);
     }
 
     /**
