@@ -31,7 +31,7 @@ class DishController extends Controller
 
         $ingredient = new Ingredient();
         $ingredients = $ingredient->getIngredients();
-        return view('pages.index', ['categories' => $categories, 'ingredients' => $ingredients]);
+        return view('dishes.create', ['categories' => $categories, 'ingredients' => $ingredients]);
     }
 
     /**

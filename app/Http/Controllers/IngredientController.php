@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreIngredientRequest;
 use App\Ingredient;
 use Illuminate\Http\Request;
 
@@ -24,18 +25,23 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        //
+        return view ('ingredients.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param StoreIngredientRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $ingredient = Request()->all();
+
+        Ingredient::create($ingredient);
+
+        return redirect('/dishes/create');
     }
 
     /**

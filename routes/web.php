@@ -11,7 +11,14 @@
 |
 */
 
+
+//Dishes
 Route::get('/dishes/create', 'DishController@create');
 
+//Categories
 Route::get('/categories/create', 'CategoryController@create');
 Route::post('/categories/store', 'CategoryController@store');
+
+//Ingredients
+Route::get('/ingredients/create', 'IngredientController@create');
+Route::post('/ingredients/store', 'IngredientController@store');

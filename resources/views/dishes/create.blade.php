@@ -18,24 +18,24 @@
                 <div class="row">
                     <legend class="col-form-label col-sm-2 pt-0"><a href="/categories/create">Categories</a></legend>
                     <div class="col-sm-10">
-                            @foreach($categories as $category)
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="radio"
-                                           name="categories"
-                                           id="gridRadios1"
-                                           value="{{ $category->id }}">
-                                    <label class="form-check-label"
-                                           for="categories">
-                                        {{ $category->name }}
-                                    </label>
-                                </div>
-                            @endforeach
+                        @foreach($categories as $category)
+                            <div class="form-check">
+                                <input class="form-check-input"
+                                       type="radio"
+                                       name="categories"
+                                       id="gridRadios1"
+                                       value="{{ $category->id }}">
+                                <label class="form-check-label"
+                                       for="categories">
+                                    {{ $category->name }}
+                                </label>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </fieldset>
             <div class="form-group row">
-                <div class="col-sm-2">Checkbox</div>
+                <div class="col-sm-2"><a href="/ingredients/create">Ingredients</a></div>
                 <div class="col-sm-10">
                     @foreach($ingredients as $ingredient)
                         <div class="form-check">
