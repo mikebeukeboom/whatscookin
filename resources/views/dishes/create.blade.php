@@ -3,7 +3,8 @@
     <div class="container">
         <h1>NEW DISH</h1>
         <form method="post"
-              action="/">
+              action="/dishes/store">
+            {{ csrf_field() }}
             <div class="form-group row">
                 <label for="dishname"
                        class="col-sm-2 col-form-label">Dish Name</label>
@@ -11,6 +12,7 @@
                     <input type="text"
                            class="form-control"
                            id="dishname"
+                           name="dish_name"
                            placeholder="Dish">
                 </div>
             </div>
@@ -41,7 +43,8 @@
                         <div class="form-check">
                             <input class="form-check-input"
                                    type="checkbox"
-                                   id="gridCheck1">
+                                   id="gridCheck1"
+                                    name="{{ $ingredient->id }}">
                             <label class="form-check-label"
                                    for="{{ $ingredient->id }}">
                                 {{ $ingredient->name }}

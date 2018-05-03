@@ -38,11 +38,14 @@ class DishController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
+     * @param StoreDishRequest &request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        dd(Request()->all());
+
+        redirect('/dishes/create');
     }
 
     /**

@@ -14,7 +14,7 @@
 
 //Dishes
 Route::get('/dishes/create', 'DishController@create');
-
+Route::post('/dishes/store', 'DishController@store');
 //Categories
 Route::get('/categories/create', 'CategoryController@create');
 Route::post('/categories/store', 'CategoryController@store');
