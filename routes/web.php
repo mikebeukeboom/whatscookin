@@ -11,6 +11,9 @@
 |
 */
 
+//Redirect home
+//Todo: Redirect to a nice landing page
+Route::get ('/', 'DishController@create');
 
 //Dishes
 Route::get('/dishes/create', 'DishController@create');

@@ -9,6 +9,6 @@ class Ingredient extends Model
     protected $fillable = ['name'];
     public function getIngredients()
     {
-        return $this->all();
+        return $this->orderBy("name",'asc')->get();
     }
 }

@@ -24,7 +24,7 @@
                             <div class="form-check">
                                 <input class="form-check-input"
                                        type="radio"
-                                       name="categories"
+                                       name="category"
                                        id="gridRadios1"
                                        value="{{ $category->id }}">
                                 <label class="form-check-label"
@@ -44,7 +44,8 @@
                             <input class="form-check-input"
                                    type="checkbox"
                                    id="gridCheck1"
-                                    name="{{ $ingredient->id }}">
+                                    name="ingredient[]"
+                                    value="{{ $ingredient->id }}">
                             <label class="form-check-label"
                                    for="{{ $ingredient->id }}">
                                 {{ $ingredient->name }}

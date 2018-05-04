@@ -41,7 +41,7 @@ class IngredientController extends Controller
 
         Ingredient::create($ingredient);
 
-        return redirect('/dishes/create');
+        return redirect('/ingredients/create');
     }
 
     /**

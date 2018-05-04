@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Dish;
 use App\Category;
+use App\Dish_Ingredients;
 use App\Ingredient;
 use Illuminate\Http\Request;
 
@@ -43,9 +44,20 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        dd(Request()->all());
+        $dish = Dish::create([
+            'id_category' => Request()->category,
+            'name' => Request()->dish_name
+        ]);
 
-        redirect('/dishes/create');
+        foreach (Request()->ingredient as $ingredient)
+        {
+            Dish_Ingredients::create([
+                'id_dish' => $dish->id,
+                'id_ingredient' => $ingredient
+            ]);
+        }
+
+        return redirect('/dishes/create');
     }
 
     /**
